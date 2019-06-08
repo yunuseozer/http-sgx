@@ -38,6 +38,7 @@ impl fmt::Debug for Error {
     }
 }
 
+#[allow(deprecated)]
 impl fmt::Display for Error {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         fmt::Display::fmt(self.get_ref(), f)
@@ -65,6 +66,7 @@ impl Error {
     }
 }
 
+#[allow(deprecated)]
 impl error::Error for Error {
     // Return any available cause from the inner error. Note the inner error is
     // not itself the cause.

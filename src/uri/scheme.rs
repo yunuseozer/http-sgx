@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use std::convert::TryFrom;
 use std::fmt;
 use std::hash::{Hash, Hasher};

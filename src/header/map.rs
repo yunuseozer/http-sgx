@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use std::collections::HashMap;
 use std::collections::hash_map::RandomState;
 use std::convert::TryFrom;
@@ -3329,6 +3330,7 @@ mod into_header_name {
 
 mod as_header_name {
     use super::{Entry, HdrName, HeaderMap, HeaderName, InvalidHeaderName};
+    use std::prelude::v1::*;
 
     /// A marker trait used to identify values that can be used as search keys
     /// to a `HeaderMap`.
