@@ -1,6 +1,7 @@
 use crate::byte_str::ByteStr;
 use bytes::{Bytes, BytesMut};
 
+use std::prelude::v1::*;
 use std::borrow::Borrow;
 use std::error::Error;
 use std::convert::{TryFrom};

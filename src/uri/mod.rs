@@ -24,6 +24,7 @@
 
 use crate::byte_str::ByteStr;
 use std::convert::TryFrom;
+use std::prelude::v1::*;
 
 use bytes::Bytes;
 
