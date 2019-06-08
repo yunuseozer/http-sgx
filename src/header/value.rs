@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use bytes::{Bytes, BytesMut};
 
 use std::{cmp, fmt, mem, str};
@@ -589,6 +590,7 @@ fn is_valid(b: u8) -> bool {
     b >= 32 && b != 127 || b == b'\t'
 }
 
+#[allow(deprecated)]
 impl fmt::Display for InvalidHeaderValue {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         self.description().fmt(f)
@@ -607,12 +609,14 @@ impl fmt::Display for InvalidHeaderValueBytes {
     }
 }
 
+#[allow(deprecated)]
 impl Error for InvalidHeaderValueBytes {
     fn description(&self) -> &str {
         self.0.description()
     }
 }
 
+#[allow(deprecated)]
 impl fmt::Display for ToStrError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         self.description().fmt(f)

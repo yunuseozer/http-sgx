@@ -36,6 +36,7 @@ enum ErrorKind {
 
 impl fmt::Display for Error {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        #[allow(deprecated)]
         error::Error::description(self).fmt(f)
     }
 }
@@ -65,6 +66,7 @@ impl Error {
     }
 }
 
+#[allow(deprecated)]
 impl error::Error for Error {
     fn description(&self) -> &str {
         use self::ErrorKind::*;

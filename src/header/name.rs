@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use HttpTryFrom;
 use byte_str::ByteStr;
 use bytes::{Bytes, BytesMut};
@@ -2015,6 +2016,7 @@ impl<'a> PartialEq<HeaderName> for &'a str {
     }
 }
 
+#[allow(deprecated)]
 impl fmt::Display for InvalidHeaderName {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         self.description().fmt(f)
@@ -2033,6 +2035,7 @@ impl fmt::Display for InvalidHeaderNameBytes {
     }
 }
 
+#[allow(deprecated)]
 impl Error for InvalidHeaderNameBytes {
     fn description(&self) -> &str {
         self.0.description()

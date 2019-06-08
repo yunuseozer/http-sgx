@@ -22,6 +22,7 @@
 //! assert_eq!(uri.path(), "/install.html");
 //! ```
 
+use std::prelude::v1::*;
 use HttpTryFrom;
 use byte_str::ByteStr;
 
@@ -1069,6 +1070,7 @@ impl From<ErrorKind> for InvalidUriParts {
     }
 }
 
+#[allow(deprecated)]
 impl fmt::Display for InvalidUri {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         self.description().fmt(f)
@@ -1105,12 +1107,14 @@ impl fmt::Display for InvalidUriParts {
     }
 }
 
+#[allow(deprecated)]
 impl Error for InvalidUriBytes {
     fn description(&self) -> &str {
         self.0.description()
     }
 }
 
+#[allow(deprecated)]
 impl Error for InvalidUriParts {
     fn description(&self) -> &str {
         self.0.description()

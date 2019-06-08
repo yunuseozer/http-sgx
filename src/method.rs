@@ -15,6 +15,7 @@
 //! assert_eq!(Method::POST.as_str(), "POST");
 //! ```
 
+use std::prelude::v1::*;
 use HttpTryFrom;
 use self::Inner::*;
 
@@ -390,6 +391,7 @@ impl InvalidMethod {
     }
 }
 
+#[allow(deprecated)]
 impl fmt::Display for InvalidMethod {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "{}", self.description())

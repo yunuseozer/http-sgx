@@ -512,6 +512,7 @@ status_codes! {
     (511, NETWORK_AUTHENTICATION_REQUIRED, "Network Authentication Required");
 }
 
+#[allow(deprecated)]
 impl fmt::Display for InvalidStatusCode {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         f.write_str(self.description())

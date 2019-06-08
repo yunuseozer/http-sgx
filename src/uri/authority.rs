@@ -1,6 +1,7 @@
 // Deprecated in 1.26, needed until our minimum version is >=1.23.
 #[allow(unused, deprecated)]
-use std::ascii::AsciiExt;
+use std::prelude::v1::*;
+//use std::ascii::AsciiExt;
 use std::{cmp, fmt, str};
 use std::hash::{Hash, Hasher};
 use std::str::FromStr;
