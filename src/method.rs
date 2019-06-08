@@ -18,6 +18,7 @@
 use self::Inner::*;
 use self::extension::{InlineExtension, AllocatedExtension};
 
+use std::prelude::v1::*;
 use std::convert::AsRef;
 use std::error::Error;
 use std::str::FromStr;

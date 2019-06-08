@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use bytes::{Bytes, BytesMut};
 
 use std::convert::TryFrom;
@@ -605,6 +606,7 @@ impl fmt::Display for InvalidHeaderValue {
 
 impl Error for InvalidHeaderValue {}
 
+#[allow(deprecated)]
 impl fmt::Display for ToStrError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         f.write_str("failed to convert header to a str")
