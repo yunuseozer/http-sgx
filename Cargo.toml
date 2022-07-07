@@ -23,10 +23,10 @@ edition = "2018"
 exclude = ["/sgx/*"]
 
 [dependencies]
-bytes = { git = "https://github.com/mesalock-linux/bytes-sgx" }
-fnv = { git = "https://github.com/mesalock-linux/rust-fnv-sgx" }
-itoa = { git = "https://github.com/mesalock-linux/itoa-sgx" }
-sgx_tstd = { rev = "v1.1.3", git = "https://github.com/apache/teaclave-sgx-sdk.git", optional = true }
+bytes = { git = "https://github.com/yunuseozer/bytes-sgx" }
+fnv = { git = "https://github.com/yunuseozer/rust-fnv-sgx", rev = "sgx_1.1.4" }
+itoa = { git = "https://github.com/yunuseozer/itoa-sgx" }
+sgx_tstd = { rev = "v1.1.4-upgrade", git = "https://github.com/yunuseozer/incubator-teaclave-sgx-sdk.git", optional = true }
 
 [features]
 default = ["mesalock_sgx"]
